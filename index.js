@@ -1,13 +1,29 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
+
+const arrayOfIntegers = [3, 8, 12, 4, 11, 7];
+const targetSum = 10;
+
+const result = hasTargetSum(arrayOfIntegers, targetSum);
+console.log(result);
 
 /* 
   Write the Big O time complexity of your function here
+  0(n)
 */
 
 /* 
   Add your pseudocode here
+  Am gonna use the linear Big o Notation to iterate through each 
+  element and find the values that add up to the target integer
 */
 
 /*
